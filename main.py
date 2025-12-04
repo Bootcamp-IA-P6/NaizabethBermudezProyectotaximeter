@@ -73,3 +73,17 @@ def taximeter():
             print(f"Moving time: {moving_time:.1f} seconds")
             print(f"Total fare: €{total_fare:.2f}")
             print("---------------------\n")
+
+            # Reset las variables para el próximo viaje
+            trip_active = False
+            state = None
+
+        elif command == "exit":
+            print("Exiting the program. Goodbye!")
+            break
+
+        else:
+            print("Unknown command. Use: start, stop, move, finish, or exit.")
+
+if __name__ == "__main__":
+    taximeter()
