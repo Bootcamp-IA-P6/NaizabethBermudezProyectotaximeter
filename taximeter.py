@@ -15,4 +15,29 @@ def taximeter():
     Función para manejar y mostrar las opciones del taxímetro.
     """
     print("Welcome to the F5 Taximeter!")
+ feature/calcular-tarifa-mientras-el-taxi-está-parado-2-céntimos-por-segundo
     print("Available commands: 'start', 'stop', 'move', 'finish', 'exit'\n")
+
+    trip_active = False
+    start_time = 0
+    stopped_time = 0
+    moving_time = 0
+    state = None  # 'stopped' o 'moving'
+    state_start_time = 0
+
+    while True:
+        command = input("> ").strip().lower()
+
+        if command == "start":
+            if trip_active:
+                print("Error: A trip is already in progress.")
+                continue
+            trip_active = True
+            start_time = time.time()
+            stopped_time = 0
+            moving_time = 0
+            state = 'stopped'  # Iniciamos en estado 'stopped'
+            state_start_time = time.time()
+            print("Trip started. Initial state: 'stopped'.")
+    print("Available commands: 'start', 'stop', 'move', 'finish', 'exit'\n")
+ feature/nivel-esencial
