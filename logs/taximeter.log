@@ -1,0 +1,10 @@
+2025-12-05 15:40:07,551 | INFO | taximeter | main:taximeter:73 | Taximeter started.
+2025-12-05 15:40:13,426 | DEBUG | taximeter | main:taximeter:86 | Command received: start
+2025-12-05 15:40:13,427 | INFO | taximeter | main:taximeter:104 | Trip started. Initial state: stopped.
+2025-12-05 15:40:25,257 | DEBUG | taximeter | main:taximeter:86 | Command received: finish
+2025-12-05 15:40:25,257 | DEBUG | taximeter | main:taximeter:140 | Final state 'stopped' duration added: 11.83
+2025-12-05 15:40:25,265 | DEBUG | taximeter | main:calculate_fare:62 | Calculating fare | stopped=11.83 s | moving=0.00 s
+2025-12-05 15:40:25,265 | INFO | taximeter | main:calculate_fare:68 | Fare calculated: €0.24
+2025-12-05 15:40:25,268 | INFO | taximeter | main:taximeter:149 | Trip finished | stopped=11.8 s | moving=0.0 s | fare=€0.24
+2025-12-05 15:40:33,287 | DEBUG | taximeter | main:taximeter:86 | Command received: exit
+2025-12-05 15:40:33,287 | INFO | taximeter | main:taximeter:169 | Program terminated by user.
