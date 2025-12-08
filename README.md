@@ -13,3 +13,11 @@ MIDDLE LEVEL
  1 Refactor the code using an object-oriented approach (OOP).
 2 Implement a password-based authentication system to protect access to the program.
 3 Develop a graphical user interface (GUI) to make the program more user-friendly.
+
+Level Expert
+
+1 Integrate database: Store trip history in a structured and persistent manner.
+
+2 Dockerize the application: Package the app and its dependencies to facilitate deployment and portability.
+
+3 Web version: Create an internet-accessible interface so the taximeter can be used in web browsers.
