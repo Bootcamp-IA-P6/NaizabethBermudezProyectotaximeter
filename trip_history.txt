@@ -4,3 +4,9 @@ Moving time: 0.0 seconds
 Total fare: €0.20
 -------------------------------
 
+--- Trip 2025-12-15 10:01:50 ---
+Stopped time: 8.3 seconds
+Moving time: 2.5 seconds
+Total fare: €0.29
+-------------------------------
+

@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from tax import Taximeter  # tu clase Taximeter en tax.py
+from logger_config import logger
 
 
-app = Flask(__name__)
+app = Flask(__name__) # Con este código inicializamos una aplicación 
 app.secret_key = "supersecretkey"  # necesario para sesiones
 
 # Usuarios en memoria
@@ -17,8 +18,8 @@ taximeter = Taximeter()
 # ======================
 # Ruta de login
 # ======================
-@app.route("/", methods=["GET", "POST"])
-def login():
+@app.route("/", methods=["GET", "POST"]) #Ruta raíz
+def login(): # Podemos obeservar que tenemos una función que se llama logout
     if request.method == "POST":
         username = request.form["username"].strip()
         password = request.form["password"].strip()
@@ -71,14 +72,23 @@ def trips():
 # ======================
 # Cerrar sesión
 # ======================
-@app.route("/logout")
-def logout():
+@app.route("/logout") 
+def logout(): 
     session.pop("username", None)
     return redirect(url_for("login"))
 
+# ---------------------------
 
 # ======================
 # Ejecutar Flask
 # ======================
 if __name__ == "__main__":
+    logger.info("Aplicación Flask iniciada")  # Esto se ejecuta al iniciar la app
     app.run(debug=True)
+
+# ======================
+# Ejecutar Flask
+# ======================
+if __name__ == "__main__":
+    app.run(debug=True) # Modo de depuración esta activo, significa que los cambios se iran ejecutando coonstatemente
+    
